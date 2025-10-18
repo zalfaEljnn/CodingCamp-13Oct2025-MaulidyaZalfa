@@ -1,0 +1,212 @@
+:root {
+    --color-background: #c5dbec;
+    --color-primary: #0A1931;    
+    --color-secondary: #97b9d3e9;  
+    --color-accent: #3f6690bf;     
+    --color-text: #0A1931;       
+    --color-light: #F6FAFD;
+    --color-danger: #0A1931;     
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Old Standard TT', serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+h1 {
+    color: var(--color-primary);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2.5em;
+    border-bottom: 3px solid var(--color-secondary);
+    padding-bottom: 10px;
+    font-family: 'Ephesis', cursive;
+}
+
+h2 {
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-family: 'Ephesis', cursive;
+}
+
+.container {
+    background-color: var(--color-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.input-section, .actions-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--color-secondary);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#todo-form {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.input-group {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--color-primary);
+}
+
+#task-input, #deadline-input, #search-input, #filter-status {
+    padding: 10px;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: var(--color-light);
+    color: var(--color-text);
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent);
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    color: var(--color-light);
+}
+
+.btn-danger:hover {
+    background-color: #B3CFE5; 
+}
+
+.btn-action {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+.btn-action:hover {
+    background-color: var(--color-primary);
+}
+
+.actions-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group input, .filter-group select {
+    width: 200px; 
+}
+
+.error-text {
+    color: var(--color-danger);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#todo-table th, #todo-table td {
+    padding: 12px;
+    border: 1px solid var(--color-secondary);
+    text-align: left;
+}
+
+#todo-table th {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    font-weight: bold;
+}
+
+#todo-list tr:nth-child(even) {
+    background-color: #ddd9fa; 
+    }
+
+#todo-list tr:hover {
+    background-color: var(--color-secondary);
+    cursor: pointer;
+
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.status-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    accent-color: var(--color-primary); 
+}
+
+@media (max-width: 650px) {
+    #todo-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .actions-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group input, .filter-group select {
+        width: 100%;
+    }
+}
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: var(--color-primary);
+    font-size: 0.9em;
+}

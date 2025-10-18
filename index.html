@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stoke:wght@300;400&display=swap" rel="stylesheet">
+
+    <!--Favicon-->
+     <link rel="icon" href="\images\elfav.ico" type="image/x-icon"> 
+
+    <title>To-Do List Earth-Tone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daftar Tugas Harian 📝</h1>
+
+        <div class="input-section">
+            <form id="todo-form">
+                <div class="input-group">
+                    <input type="text" id="task-input" placeholder="Tulis tugas baru di sini..." required>
+                </div>
+                <div class="input-group">
+                    <label for="deadline-input">Deadline:</label>
+                    <input type="date" id="deadline-input" required>
+                </div>
+                <button type="submit" id="add-button" class="btn btn-primary">Tambah Tugas</button>
+            </form>
+            <p id="error-message" class="error-text"></p>
+        </div>
+
+        <div class="actions-section">
+            <div class="filter-group">
+                <label for="filter-status">Filter Status:</label>
+                <select id="filter-status">
+                    <option value="all">Semua</option>
+                    <option value="pending">Belum Selesai</option>
+                    <option value="completed">Selesai</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="text" id="search-input" placeholder="Cari Tugas...">
+            </div>
+            <button id="delete-all-button" class="btn btn-danger">Hapus Semua</button>
+        </div>
+
+        <div class="list-section">
+            <h2>Daftar Tugas
+                <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+            </h2>
+            <table id="todo-table">
+                <thead>
+                    <tr>
+                        <th>Tugas</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="todo-list">
+                    <tr><td colspan="4" class="no-task">Tidak ada tugas ditemukan.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="footer">
+            <p>© 2025 Maulidya Zalfa. All rights reserved.</p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
